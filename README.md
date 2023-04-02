@@ -72,6 +72,10 @@ INFO[0000] Start initial compatible provider GlobalTV
 [root@localhost ~]# gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1']"
 ```
 
+- 或者设置代理环境变量即可
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+
 - 图形化界面形式开启（装有GUI使用）
 
 打开系统设置，点击网络代理右边的 ⚙ 按钮，选择手动，填写 HTTP 和 HTTPS 代理为 127.0.0.1:7890，填写 Socks 主机为 127.0.0.1:7891，即可启用系统代理，如下图所示。
@@ -105,7 +109,7 @@ Description=clash daemon
 [Service]
 Type=simple
 User=root
-ExecStart=/opt/clash/clash -d /opt/clash/clash/
+ExecStart=/opt/clash/clash -d /opt/clash/
 Restart=on-failure
 
 [Install]
