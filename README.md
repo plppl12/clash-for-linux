@@ -73,8 +73,10 @@ INFO[0000] Start initial compatible provider GlobalTV
 ```
 
 - 或者设置代理环境变量即可
+```bash
 export http_proxy=http://127.0.0.1:7890
 export https_proxy=http://127.0.0.1:7890
+```
 
 - 图形化界面形式开启（装有GUI使用）
 
